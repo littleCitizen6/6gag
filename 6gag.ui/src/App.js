@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PostsSection from './Component/postsSection/postsSection.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PostsSection posts={[
+        {title:"meme1", alt:"alt1", src:'./mockPosts/meme1.jpg'},
+        {title:"meme2", alt:"alt2", src:'./mockPosts/meme2.jpg'},
+        {title:"elon mask be like", alt:"alt3", src:'./mockPosts/meme3.png'},
+        {title:"meme4", alt:"alt4", src:'./mockPosts/meme4.jpg'}
+      ]}></PostsSection>
     </div>
   );
 }
