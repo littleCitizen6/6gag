@@ -9,8 +9,17 @@ import {
 } from "react-router-dom";
 import Gag from './Component/pages/gag/gag';
 import NavBar from './Component/navbar/navbar.jsx'
+import axios from 'axios';
+
+
+
+
 
 function App() {
+  // let posts;
+  // axios.get('http://localhost:3001/gag').then(res =>{
+  //   const posts = res.data;
+  // })
   let posts=[
     {id:1, title:"meme1", alt:"alt1", src:'./mockPosts/meme1.jpg'},
     {id:2, title:"meme2", alt:"alt2", src:'./mockPosts/meme2.jpg'},

@@ -1,20 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import Post from '../post/post';
 import './postsSection.css';
+import axios from 'axios';
 
-class PostsSection extends Component{
+function PostsSection(props) {
 
-    render(){
+        const [posts, setPosts] = useState([]);
+        axios.get('http://localhost:3001/gag').then(res =>{
+        setPosts(res.data);
+     })
         return(
             <div className="container post-section">
-                {this.props.posts.map(item =>
+                {posts.map(item =>
                     <div className="col-md-10 post-container">
                         <Post post={item}></Post>
                     </div>
                 )}
             </div>
         )
-    }
 }
 
 export default PostsSection;

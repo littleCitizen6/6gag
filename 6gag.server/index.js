@@ -8,9 +8,9 @@ var posts = [
     {id:uuid.v4(), title:"elon mask be like", alt:"alt3", src:'./mockPosts/meme3.png'},
     {id:uuid.v4(), title:"meme4", alt:"alt4", src:'./mockPosts/meme4.jpg'}
   ];
-
+  
 app.get('/gag', (req, res) =>{
-    res.status(200).send(posts);
+    res.status(200).send("somthing went wrong");
 });
 
 app.get('/gag/:id', (req, res) =>{
