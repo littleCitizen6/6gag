@@ -3,6 +3,7 @@ import {Card} from "react-bootstrap";
 import './post.css';
 import { Link } from "react-router-dom";
 import {uuid} from 'uuidv4';
+import axios from 'axios';
 
 function Post(props) {
     const [post, setPost] = useState({
@@ -17,6 +18,7 @@ function Post(props) {
      else{
         axios.get(`http://localhost:3001/gag/${props.id}`).then(res =>{
         setPost(res.data);
+        console.log({})
      })
     }
         return(

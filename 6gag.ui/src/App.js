@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Gag from './Component/pages/gag/gag';
 import NavBar from './Component/navbar/navbar.jsx'
-import axios from 'axios';
+
 
 
 
@@ -20,22 +20,22 @@ function App() {
   // axios.get('http://localhost:3001/gag').then(res =>{
   //   const posts = res.data;
   // })
-  let posts=[
-    {id:1, title:"meme1", alt:"alt1", src:'./mockPosts/meme1.jpg'},
-    {id:2, title:"meme2", alt:"alt2", src:'./mockPosts/meme2.jpg'},
-    {id:3, title:"elon mask be like", alt:"alt3", src:'./mockPosts/meme3.png'},
-    {id:4, title:"meme4", alt:"alt4", src:'./mockPosts/meme4.jpg'}
-  ];
+  // let posts=[
+  //   {id:1, title:"meme1", alt:"alt1", src:'./mockPosts/meme1.jpg'},
+  //   {id:2, title:"meme2", alt:"alt2", src:'./mockPosts/meme2.jpg'},
+  //   {id:3, title:"elon mask be like", alt:"alt3", src:'./mockPosts/meme3.png'},
+  //   {id:4, title:"meme4", alt:"alt4", src:'./mockPosts/meme4.jpg'}
+  // ];
   return (
     <Router>
       <Switch>
         <Route exact path="/">
           <NavBar/>
-          <Home posts={posts}/>
+          <Home/>
         </Route>
         <Route path="/post/:id">
           <NavBar/>
-          <Gag posts={posts}/>
+          <Gag/>
         </Route>
       </Switch>
     </Router>
